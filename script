@@ -1,0 +1,8 @@
+@echo off
+
+for /D %%y (C:\Users\%username%\Documents) DO (
+cd %%y
+mkdir "Documents" "%%y"
+xcopy "C:\Users\%username%\AppData\Roaming\Microsoft\Signatures\*.txt" %%y
+)
+pause
